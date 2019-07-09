@@ -43,7 +43,7 @@ func addItem(request RequestDetails, espXmlmc *apiLib.XmlmcInstStruct, buffer *b
 	strVal := getFieldValue(ltpDetails.ItemValue, &request.CallMap)
 	strDisp := getFieldValue(ltpDetails.DefaultDisplay, &request.CallMap)
 	if strVal != "" && strDisp != "" {
-		espXmlmc.SetParam("application", "com.hornbill.servicemanager")
+		espXmlmc.SetParam("application", ltpDetails.Application)
 		espXmlmc.SetParam("listName", ltpDetails.ListName)
 		espXmlmc.SetParam("itemValue", strVal)
 		espXmlmc.SetParam("defaultItemName", strDisp)
