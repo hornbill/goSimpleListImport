@@ -18,7 +18,7 @@
   },
   "Lists": [
   {
-    "SQL": "SELECT value AS val, value AS disp FROM swlists",
+    "SQL": "SELECT val, disp FROM swlists",
     "Rebuild": false,
     "Application": "com.hornbill.servicemanager",
     "ListName": "someList",

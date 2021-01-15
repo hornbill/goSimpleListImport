@@ -18,7 +18,7 @@
   },
   "Lists": [
   {
-    "SQL": "SELECT value AS val, value AS disp FROM list_table",
+    "SQL": "SELECT value AS val, display AS disp FROM file.xls",
     "Rebuild": false,
     "Application": "com.hornbill.servicemanager",
     "ListName": "someList",
@@ -27,7 +27,7 @@
     "Translations": [
 	{
 		"Language": "en-GB",
-		"Display": "{.disp}"
+		"Display": "[disp]"
 	}
     ]
   }
