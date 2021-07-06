@@ -88,7 +88,7 @@ func queryDBListDetails(strSQL string) ([]map[string]interface{}, bool) {
 	for rows.Next() {
 
 		results := make(map[string]interface{})
-		err = rows.MapScan(results)
+		_ = rows.MapScan(results)
 		//Stick marshalled data map in to parent slice
 		arrCallDetailsMaps = append(arrCallDetailsMaps, results)
 	}
