@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	version = "1.0.2"
+	version = "1.1.0"
 )
 
 var (
@@ -38,7 +38,7 @@ type counterTypeStruct struct {
 	deletedSkipped int
 }
 
-//----- Config Data Structs
+// ----- Config Data Structs
 type importConfStruct struct {
 	HBConf    hbConfStruct    //Hornbill Instance connection details
 	AppDBConf appDBConfStruct //App Data (swdata) connection details
@@ -75,7 +75,7 @@ type appDBConfStruct struct {
 	Encrypt  bool
 }
 
-//----- Shared Structs -----
+// ----- Shared Structs -----
 type stateStruct struct {
 	Code     string `xml:"code"`
 	ErrorRet string `xml:"error"`
@@ -83,7 +83,7 @@ type stateStruct struct {
 
 //----- Data Structs -----
 
-//----- Request Logged Structs
+// ----- Request Logged Structs
 type xmlmcRequestResponseStruct struct {
 	MethodResult     string      `xml:"status,attr"`
 	RequestID        string      `xml:"params>primaryEntityData>record>h_pk_reference"`
@@ -93,7 +93,7 @@ type xmlmcRequestResponseStruct struct {
 	State            stateStruct `xml:"state"`
 }
 
-//RequestDetails struct for chan
+// RequestDetails struct for chan
 type RequestDetails struct {
 	CallMap map[string]interface{}
 }
